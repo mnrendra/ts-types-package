@@ -40,5 +40,8 @@
     "semantic-release": "^21.0.2",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@mnrendra/ts-types-merge": "^2.0.0"
   }
 }

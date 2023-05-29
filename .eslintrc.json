@@ -17,6 +17,7 @@
       "ignoreTemplateLiterals": true,
       "ignoreStrings": true
     }],
-    "@typescript-eslint/strict-boolean-expressions": "off"
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/ban-types": "off"
   }
 }
