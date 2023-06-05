@@ -1,6 +1,6 @@
 {
   "name": "@mnrendra/ts-types-package",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "TypeScript utility type to validate `package.json` fields.",
   "private": false,
   "main": "dist/index.js",
