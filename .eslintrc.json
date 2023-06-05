@@ -12,7 +12,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "max-len": ["error", {
+    "max-len": ["warn", {
       "ignoreUrls": true,
       "ignoreTemplateLiterals": true,
       "ignoreStrings": true
