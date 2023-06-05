@@ -1,46 +1,40 @@
-import type {
-  // utils types
-  URL,
-  People,
-  // fields types
-  Keywords,
-  Bugs,
-  Contributors,
-  Funding,
-  Files,
-  Browser,
-  Bin,
-  Man,
-  Repository,
-  Config,
-  Dependencies,
-  PeerDependenciesMeta,
-  BundleDependencies,
-  OptionalDependencies,
-  Overrides,
-  OS,
-  CPU,
-  Workspaces
-} from './types'
+import type { URL, People, Dependencies } from '../utils'
 
-import type {
-  Directories,
-  Engines,
-  PublishConfig,
-  Scripts
-} from './interfaces'
+import type Name from './Name'
+import type Keywords from './Keywords'
+import type Bugs from './Bugs'
+import type Contributors from './Contributors'
+import type Funding from './Funding'
+import type Files from './Files'
+import type Browser from './Browser'
+import type Bin from './Bin'
+import type Man from './Man'
+import type Directories from './Directories'
+import type Repository from './Repository'
+import type Scripts from './Scripts'
+import type Config from './Config'
+import type PeerDependenciesMeta from './PeerDependenciesMeta'
+import type BundleDependencies from './BundleDependencies'
+import type Overrides from './Overrides'
+import type Engines from './Engines'
+import type OS from './OS'
+import type CPU from './CPU'
+import type Private from './Private'
+import type PublishConfig from './PublishConfig'
+import type Workspaces from './Workspaces'
 
 /**
  * Official `package.json` fields.
+ *
  * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json
  */
-interface OfficialPackage {
+export interface OfficialPackage {
   /**
    * The name of the package.
    *
    * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name
    */
-  name?: string
+  name: Name
 
   /**
    * Version must be parseable by node-semver, which is bundled with npm as a
@@ -48,7 +42,7 @@ interface OfficialPackage {
    *
    * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json#version
    */
-  version?: string
+  version: string
 
   /**
    * This helps people discover your package, as it's listed in 'npm search'.
@@ -230,13 +224,12 @@ interface OfficialPackage {
    *
    * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json#optionaldependencies
    */
-  optionalDependencies?: OptionalDependencies
+  optionalDependencies?: Dependencies
 
   /**
    * Overrides is used to support selective version overrides using npm, which
    * lets you define custom package versions or ranges inside your
-   * dependencies. For yarn, use resolutions instead. See:
-   * https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides
+   * dependencies. For yarn, use resolutions instead.
    *
    * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides
    */
@@ -268,7 +261,7 @@ interface OfficialPackage {
    *
    * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json#private
    */
-  private?: boolean
+  private?: Private
 
   /**
    * @see https://docs.npmjs.com/cli/v9/configuring-npm/package-json#publishconfig
